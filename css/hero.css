@@ -1,0 +1,9 @@
+.hero {
+    height: calc(100vh - 80px);
+    width: 100vw;
+    background-image: url("https://www.recreiodajuventude.com.br/userfiles/redacao/posts/debut4-1-site-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}

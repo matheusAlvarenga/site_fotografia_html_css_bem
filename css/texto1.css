@@ -1,0 +1,19 @@
+.texto1 {
+    width: 50%;
+    margin-top: 64px;
+}
+
+.texto1 h1 {
+    width: 8 0%;
+}
+
+.texto1__double {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32px;
+}
+
+.texto1__double p {
+    text-align: justify;
+}

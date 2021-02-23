@@ -1,0 +1,9 @@
+.texto2 {
+    width: 50%;
+    margin-top: 64px;
+    text-align: center;
+}
+
+.texto2 .gen__acima {
+    margin-bottom: 16px;
+}

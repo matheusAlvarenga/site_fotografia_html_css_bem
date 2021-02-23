@@ -1,0 +1,89 @@
+.formulario {
+    margin-top: 64px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__foto {
+    width: 100%;
+    height: 300px;
+    background: url("https://www.aceitosim.com.br/15-anos/wp-content/uploads/2019/04/vestido-para-mae-da-debutante-960x480.jpg");
+    background-position: 0 29%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.formulario__form {
+    margin-top: -75px;
+    padding: 40px 64px;
+    width: 60%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario__form .gen__acima,
+.formulario__form p {
+    text-align: center;
+}
+
+.formulario__form p {
+    margin-top: 16px;
+    margin-bottom: 32px;
+    width: 70%;
+}
+
+.formulario__form .gen__acima {
+    margin: 0;
+}
+
+.formulario__form form {
+    width: 100%;
+}
+
+.formulario__input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.formulario__input-group label {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 4px;
+}
+
+.formulario__input-group .formulario__input,
+.formulario__input-group .formulario__textarea {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #9f9f9f;
+    padding: 16px;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.formulario__input-group .formulario__textarea {
+    height: 200px;
+    resize: none;
+}
+
+.formulario__btn-group {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.formulario__btn {
+    width: 100%;
+    height: 50px;
+    background: #95313d;
+    border: 1px solid #9f9f9f;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+}
