@@ -5,9 +5,17 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-row: 1fr;
     padding: 0 3vw;
-    z-index: 999;
+    z-index: 100;
     position: fixed;
     background-color: white;
+}
+
+.header--hamb {
+    display: none;
+}
+
+.header--no-hamb {
+    display: grid;
 }
 
 .header__nav {
@@ -63,4 +71,29 @@
 
 .header__img {
     width: 70%;
+}
+
+@media only screen and (max-width: 950px) {
+    .header--hamb {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .header--no-hamb {
+        display: none;
+    }
+
+    .header__nav svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .header__logo {
+        width: 350px;
+        height: 110px;
+    }
+
+    .header__img {
+        width: 60%;
+    }
 }

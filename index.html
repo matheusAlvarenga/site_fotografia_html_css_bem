@@ -15,11 +15,87 @@
         <link rel="stylesheet" href="./css/galeria3.css" />
         <link rel="stylesheet" href="./css/formulario.css" />
         <link rel="stylesheet" href="./css/footer.css" />
+        <link rel="stylesheet" href="./css/modal.css" />
+        <link rel="stylesheet" href="./css/menu.css" />
         <title>Site de Fotografia</title>
+        <script>
+            function abrirModal(e) {
+                const modal = document.getElementById("modal");
+                const modalImg = document.getElementById("modal-img");
+
+                modalImg.src = e.src;
+
+                modal.classList.value = "modal";
+            }
+
+            function fecharModal() {
+                const modal = document.getElementById("modal");
+                modal.classList.value = "modal disabled";
+            }
+
+            function abrirMenu() {
+                const menu = document.getElementById("menu");
+                menu.classList.value = "menu";
+            }
+
+            function fecharMenu() {
+                const menu = document.getElementById("menu");
+                menu.classList.value = "menu disabled";
+            }
+        </script>
     </head>
     <body>
+        <div id="modal" class="modal disabled">
+            <img id="modal-img" src="" alt="modal" />
+            <div class="modal__ovl" onclick="fecharModal()"></div>
+            <div class="modal__x" onclick="fecharModal()">X</div>
+        </div>
+        <div id="menu" class="menu">
+            <div class="menu__nav gen__sombra-pd">
+                <ul>
+                    <li onclick="fecharMenu()" class="menu__x">X</li>
+                    <li><a class="active" href="#">Início</a></li>
+                    <li><a href="#">Casamento</a></li>
+                    <li><a href="#">15 anos</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">Família</a></li>
+                    <li><a href="#">Corporativo</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="menu__ovl" onclick="fecharMenu()"></div>
+        </div>
         <div class="geral">
-            <header class="header gen__sombra-pd">
+            <header class="header gen__sombra-pd header--hamb">
+                <div class="header__logo gen__sombra-pd">
+                    <img
+                        src="https://www.recordwedding.com.br/site/wp-content/uploads/2018/07/record-wedding-logo.png"
+                        alt="Logo"
+                        class="header__img"
+                    />
+                </div>
+
+                <ul class="header__nav header--nav-left">
+                    <li>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-list"
+                            viewBox="0 0 16 16"
+                            onclick="abrirMenu()"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                            />
+                        </svg>
+                    </li>
+                </ul>
+            </header>
+            <header class="header gen__sombra-pd header--no-hamb">
                 <ul class="header__nav header--nav-left">
                     <li><a class="active" href="#">Início</a></li>
                     <li><a href="#">Casamento</a></li>
@@ -82,24 +158,28 @@
                 <div class="galeria1">
                     <div class="galeria1__photo">
                         <img
+                            onclick="abrirModal(this)"
                             src="https://www.vivergoias.com.br/uploads/images/2019/07/debutante-o-sonho-de-princesa.jpg"
                             alt="foto-1"
                         />
                     </div>
                     <div class="galeria1__photo">
                         <img
+                            onclick="abrirModal(this)"
                             src="https://www.buffettulipas.com.br/wp-content/uploads/2018/07/valsa_de_15_anos-1030x687.jpeg"
                             alt="foto-2"
                         />
                     </div>
                     <div class="galeria1__photo">
                         <img
+                            onclick="abrirModal(this)"
                             src="https://cdn.eutotal.com/imagens/vestido-de-15-anos-45-modelos-para-quem-quer-arrasar-na-festa-de-debutante-og.jpg"
                             alt="foto-3"
                         />
                     </div>
                     <div class="galeria1__photo">
                         <img
+                            onclick="abrirModal(this)"
                             src="https://folhadomate.com/wp-content/uploads/2019/04/debutantes-site.jpg"
                             alt="foto-4"
                         />
@@ -122,18 +202,21 @@
                 <div class="galeria2">
                     <div class="galeria2__photo">
                         <img
+                            onclick="abrirModal(this)"
                             src="https://www.ricardohara.com.br//uploads/2218ddeed561fdbf2553de38f2d478a9.jpg"
                             alt="foto-1"
                         />
                     </div>
                     <div class="galeria2__photo">
                         <img
+                            onclick="abrirModal(this)"
                             src="https://gpslifetime.com.br/uploads/content_manager/contents/56189/image/tayna-de-melo-costa-celebra-aniversario-com-baile-de-debutante-891a.jpg"
                             alt="foto-2"
                         />
                     </div>
                     <div class="galeria2__photo">
                         <img
+                            onclick="abrirModal(this)"
                             src="https://lh3.googleusercontent.com/proxy/0QQ8DwR1QYQ_ZAZZqDLqB8gqG859Ei9svANOGDb8jDmKfDrHAb_wrphAYn6CVfYAm-718whesaGpcc-MnfnAi3Y3jPvZ06ahThdZ8qMjp45b32exIum7FRuj6Q74Dtw9ksdxQ_g"
                             alt="foto-3"
                         />
@@ -144,40 +227,88 @@
                     <h2>Galeria</h2>
                     <div class="galeria3__grid">
                         <div class="galeria3__photo">
-                            <img src="./assets/1.jpg" alt="photo-1" />
+                            <img
+                                onclick="abrirModal(this)"
+                                src="./assets/1.jpg"
+                                alt="photo-1"
+                            />
                         </div>
                         <div class="galeria3__photo">
-                            <img src="./assets/2.jpg" alt="photo-2" />
+                            <img
+                                onclick="abrirModal(this)"
+                                src="./assets/2.jpg"
+                                alt="photo-2"
+                            />
                         </div>
                         <div class="galeria3__photo">
-                            <img src="./assets/3.jpg" alt="photo-3" />
+                            <img
+                                onclick="abrirModal(this)"
+                                src="./assets/3.jpg"
+                                alt="photo-3"
+                            />
                         </div>
                         <div class="galeria3__photo">
-                            <img src="./assets/4.jpg" alt="photo-4" />
+                            <img
+                                onclick="abrirModal(this)"
+                                src="./assets/4.jpg"
+                                alt="photo-4"
+                            />
                         </div>
                         <div class="galeria3__photo">
-                            <img src="./assets/5.jpg" alt="photo-5" />
+                            <img
+                                onclick="abrirModal(this)"
+                                src="./assets/5.jpg"
+                                alt="photo-5"
+                            />
                         </div>
                         <div class="galeria3__photo">
-                            <img src="./assets/6.jpg" alt="photo-6" />
+                            <img
+                                onclick="abrirModal(this)"
+                                src="./assets/6.jpg"
+                                alt="photo-6"
+                            />
                         </div>
                         <div class="galeria3__photo">
-                            <img src="./assets/7.jpg" alt="photo-7" />
+                            <img
+                                onclick="abrirModal(this)"
+                                src="./assets/7.jpg"
+                                alt="photo-7"
+                            />
                         </div>
                         <div class="galeria3__photo">
-                            <img src="./assets/8.jpg" alt="photo-8" />
+                            <img
+                                onclick="abrirModal(this)"
+                                src="./assets/8.jpg"
+                                alt="photo-8"
+                            />
                         </div>
                         <div class="galeria3__photo">
-                            <img src="./assets/9.jpg" alt="photo-9" />
+                            <img
+                                onclick="abrirModal(this)"
+                                src="./assets/9.jpg"
+                                alt="photo-9"
+                            />
                         </div>
                         <div class="galeria3__photo">
-                            <img src="./assets/10.jpg" alt="photo-10" />
+                            <img
+                                onclick="abrirModal(this)"
+                                src="./assets/10.jpg"
+                                alt="photo-10"
+                            />
                         </div>
                         <div class="galeria3__photo">
-                            <img src="./assets/11.jpg" alt="photo-11" />
+                            <img
+                                onclick="abrirModal(this)"
+                                src="./assets/11.jpg"
+                                alt="photo-11"
+                            />
                         </div>
                         <div class="galeria3__photo">
-                            <img src="./assets/12.jpg" alt="photo-12" />
+                            <img
+                                onclick="abrirModal(this)"
+                                src="./assets/12.jpg"
+                                alt="photo-12"
+                            />
                         </div>
                     </div>
                 </div>

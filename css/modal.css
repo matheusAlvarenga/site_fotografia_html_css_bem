@@ -1,0 +1,35 @@
+.modal {
+    z-index: 999;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    z-index: 999;
+    height: 90%;
+}
+
+.modal__ovl {
+    top: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__x {
+    position: absolute;
+    top: 16px;
+    right: 32px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal.disabled {
+    display: none;
+}
