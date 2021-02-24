@@ -87,3 +87,29 @@
     color: #ffffff;
     font-weight: 700;
 }
+
+@media only screen and (max-width: 1100px) {
+    .formulario {
+        margin-top: 48px;
+    }
+    .formulario__form {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .formulario {
+        margin-top: 36px;
+    }
+    .formulario__foto {
+        height: 220px;
+    }
+    .formulario__form {
+        margin-top: -100px;
+        width: 90%;
+        padding: 20px 28px;
+    }
+    .formulario__form p {
+        width: 90%;
+    }
+}
