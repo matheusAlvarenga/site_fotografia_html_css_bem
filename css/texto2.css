@@ -7,3 +7,21 @@
 .texto2 .gen__acima {
     margin-bottom: 16px;
 }
+
+@media only screen and (max-width: 1100px) {
+    .texto2 {
+        margin-top: 48px;
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .texto2 {
+        margin-top: 36px;
+        width: 80%;
+    }
+
+    .texto2 .gen__acima {
+        margin-bottom: 12px;
+    }
+}
