@@ -12,3 +12,17 @@
     height: 100%;
     object-fit: cover;
 }
+
+@media only screen and (max-width: 1100px) {
+    .galeria2 {
+        margin-top: 48px;
+        grid-template-columns: 1fr 40vw 1fr;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .galeria2 {
+        margin-top: 36px;
+        grid-template-columns: 1fr 100vw 1fr;
+    }
+}

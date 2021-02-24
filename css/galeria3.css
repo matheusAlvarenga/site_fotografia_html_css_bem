@@ -24,3 +24,27 @@
     height: 100%;
     object-fit: cover;
 }
+
+@media only screen and (max-width: 1100px) {
+    .galeria3__grid {
+        margin-top: 48px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .galeria3__grid {
+        margin-top: 36px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .galeria3__grid {
+        margin-top: 36px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
